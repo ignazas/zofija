@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="102684101858fs"></ZoomStartTime>
+      <ZoomEndTime time="128011011700fs"></ZoomEndTime>
+      <Cursor1Time time="105691551000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="69"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wave_markers>
+      <marker time="43843275000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/top/design_1_i/mclock" type="logic">
+      <obj_property name="ElementShortName">mclock</obj_property>
+      <obj_property name="ObjectShortName">mclock</obj_property>
+      <obj_property name="CustomSignalColor">#800080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/bclock" type="logic">
+      <obj_property name="ElementShortName">bclock</obj_property>
+      <obj_property name="ObjectShortName">bclock</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/driver_output_0/inst/out_sdata" type="logic">
+      <obj_property name="ElementShortName">out_sdata</obj_property>
+      <obj_property name="ObjectShortName">out_sdata</obj_property>
+      <obj_property name="CustomSignalColor">#FF0000</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/lrclock" type="logic">
+      <obj_property name="ElementShortName">lrclock</obj_property>
+      <obj_property name="ObjectShortName">lrclock</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/driver_output_0/inst/sampled" type="logic">
+      <obj_property name="ElementShortName">sampled</obj_property>
+      <obj_property name="ObjectShortName">sampled</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/driver_output_0/inst/sample_width" type="array">
+      <obj_property name="ElementShortName">sample_width[4:0]</obj_property>
+      <obj_property name="ObjectShortName">sample_width[4:0]</obj_property>
+      <obj_property name="Radix">OCTALRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/driver_output_0/inst/out_pdata" type="array">
+      <obj_property name="ElementShortName">out_pdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">out_pdata[31:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/driver_output_0/inst/bclk_divider" type="array">
+      <obj_property name="ElementShortName">bclk_divider[2:0]</obj_property>
+      <obj_property name="ObjectShortName">bclk_divider[2:0]</obj_property>
+      <obj_property name="Radix">OCTALRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/sinus_sampler_0_audio_data" type="array">
+      <obj_property name="ElementShortName">sinus_sampler_0_audio_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sinus_sampler_0_audio_data[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">150</obj_property>
+      <obj_property name="AnalogYRangeMin">-58524.200000</obj_property>
+      <obj_property name="AnalogYRRangeMax">129739.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_CLIP</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      <obj_property name="CustomSignalColor">#0000FF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
+      <obj_property name="radix_fractionWidth">0</obj_property>
+      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+   </wvobject>
+</wave_config>

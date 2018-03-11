@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="top_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="top" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="781273000fs"></ZoomStartTime>
+      <ZoomEndTime time="997773001fs"></ZoomEndTime>
+      <Cursor1Time time="795023000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="175"></NameColumnWidth>
+      <ValueColumnWidth column_width="183"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="21" />
+   <wave_markers>
+      <marker time="188210000" label="" />
+      <marker time="995054000" label="" />
+   </wave_markers>
+   <wvobject fp_name="/top/sdata" type="logic">
+      <obj_property name="ElementShortName">sdata</obj_property>
+      <obj_property name="ObjectShortName">sdata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/bclock" type="logic">
+      <obj_property name="ElementShortName">bclock</obj_property>
+      <obj_property name="ObjectShortName">bclock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/lrclock" type="logic">
+      <obj_property name="ElementShortName">lrclock</obj_property>
+      <obj_property name="ObjectShortName">lrclock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/mclock" type="logic">
+      <obj_property name="ElementShortName">mclock</obj_property>
+      <obj_property name="ObjectShortName">mclock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/sdata_in" type="logic">
+      <obj_property name="ElementShortName">sdata_in</obj_property>
+      <obj_property name="ObjectShortName">sdata_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/sys_clock" type="logic">
+      <obj_property name="ElementShortName">sys_clock</obj_property>
+      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/bclock" type="logic">
+      <obj_property name="ElementShortName">bclock</obj_property>
+      <obj_property name="ObjectShortName">bclock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/lrclock" type="logic">
+      <obj_property name="ElementShortName">lrclock</obj_property>
+      <obj_property name="ObjectShortName">lrclock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/mclock" type="logic">
+      <obj_property name="ElementShortName">mclock</obj_property>
+      <obj_property name="ObjectShortName">mclock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/sdata" type="logic">
+      <obj_property name="ElementShortName">sdata</obj_property>
+      <obj_property name="ObjectShortName">sdata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/sdata_in" type="logic">
+      <obj_property name="ElementShortName">sdata_in</obj_property>
+      <obj_property name="ObjectShortName">sdata_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/sys_clock" type="logic">
+      <obj_property name="ElementShortName">sys_clock</obj_property>
+      <obj_property name="ObjectShortName">sys_clock</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/big_ben_0_out_1k" type="logic">
+      <obj_property name="ElementShortName">big_ben_0_out_1k</obj_property>
+      <obj_property name="ObjectShortName">big_ben_0_out_1k</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/big_ben_0_out_bclk" type="logic">
+      <obj_property name="ElementShortName">big_ben_0_out_bclk</obj_property>
+      <obj_property name="ObjectShortName">big_ben_0_out_bclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/big_ben_0_out_lrclk" type="logic">
+      <obj_property name="ElementShortName">big_ben_0_out_lrclk</obj_property>
+      <obj_property name="ObjectShortName">big_ben_0_out_lrclk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/clk_wiz_0_clk_12288" type="logic">
+      <obj_property name="ElementShortName">clk_wiz_0_clk_12288</obj_property>
+      <obj_property name="ObjectShortName">clk_wiz_0_clk_12288</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/clk_wiz_0_clk_5" type="logic">
+      <obj_property name="ElementShortName">clk_wiz_0_clk_5</obj_property>
+      <obj_property name="ObjectShortName">clk_wiz_0_clk_5</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/driver_output_0_out_sdata" type="logic">
+      <obj_property name="ElementShortName">driver_output_0_out_sdata</obj_property>
+      <obj_property name="ObjectShortName">driver_output_0_out_sdata</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/sdata_in_1" type="logic">
+      <obj_property name="ElementShortName">sdata_in_1</obj_property>
+      <obj_property name="ObjectShortName">sdata_in_1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/sinus_sampler_0_audio_data" type="array">
+      <obj_property name="ElementShortName">sinus_sampler_0_audio_data[23:0]</obj_property>
+      <obj_property name="ObjectShortName">sinus_sampler_0_audio_data[23:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/sys_clock_1" type="logic">
+      <obj_property name="ElementShortName">sys_clock_1</obj_property>
+      <obj_property name="ObjectShortName">sys_clock_1</obj_property>
+   </wvobject>
+</wave_config>
