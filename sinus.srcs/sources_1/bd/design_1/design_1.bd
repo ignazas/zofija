@@ -339,22 +339,22 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>clocker_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="clocker" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:instanceName>big_ben_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="big_ben" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_clocker_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">clocker</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_big_ben_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">big_ben</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>big_ben_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="big_ben" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:instanceName>sinus_sampler_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="sinus_sampler" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_big_ben_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">big_ben</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_sinus_sampler_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">sinus_sampler</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -372,11 +372,11 @@
         </spirit:configurableElementValues>
       </spirit:componentInstance>
       <spirit:componentInstance>
-        <spirit:instanceName>sinus_sampler_0</spirit:instanceName>
-        <spirit:componentRef spirit:library="module_ref" spirit:name="sinus_sampler" spirit:vendor="xilinx.com" spirit:version="1.0"/>
+        <spirit:instanceName>clocker_0</spirit:instanceName>
+        <spirit:componentRef spirit:library="module_ref" spirit:name="clocker" spirit:vendor="xilinx.com" spirit:version="1.0"/>
         <spirit:configurableElementValues>
-          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_sinus_sampler_0_0</spirit:configurableElementValue>
-          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">sinus_sampler</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:xciName">design_1_clocker_0_0</spirit:configurableElementValue>
+          <spirit:configurableElementValue spirit:referenceId="bd:referenceName">clocker</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:subInstancePath"></spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:referenceType">hdl</spirit:configurableElementValue>
           <spirit:configurableElementValue spirit:referenceId="bd:BoundaryCRC">0x0</spirit:configurableElementValue>
@@ -393,8 +393,8 @@
         <spirit:name>clk_wiz_0_clk_12288</spirit:name>
         <spirit:internalPortReference spirit:componentRef="clk_wiz_0" spirit:portRef="clk_12288"/>
         <spirit:externalPortReference spirit:portRef="mclock"/>
-        <spirit:internalPortReference spirit:componentRef="clocker_0" spirit:portRef="in_12288"/>
         <spirit:internalPortReference spirit:componentRef="driver_output_0" spirit:portRef="in_mclock"/>
+        <spirit:internalPortReference spirit:componentRef="clocker_0" spirit:portRef="in_12288"/>
       </spirit:adHocConnection>
       <spirit:adHocConnection>
         <spirit:name>clocker_0_out_lrclock</spirit:name>

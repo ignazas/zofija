@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='E:/Development/sinus_v2/sinus_v2/sinus.runs/synth_1'
+HD_PWD='E:/Development/zofija/sinus.runs/synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

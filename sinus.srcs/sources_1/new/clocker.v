@@ -18,7 +18,6 @@ module clocker(
 	end
 
 	always @ (posedge in_12288) begin 
-
 		if(bclk_divider == 3) // BCLK 1563kHz @0.6510 us 
 			begin
 				bclk_divider <= 0;

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sat Mar 10 21:44:52 2018" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 11 22:52:58 2018" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:arty-a7-35:part0:1.0" DEVICE="7a35ti" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1L"/>
 
@@ -642,8 +642,8 @@
         <PORT CLKFREQUENCY="12288135" DIR="O" NAME="clk_12288" SIGIS="clk" SIGNAME="clk_wiz_0_clk_12288">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="mclock"/>
-            <CONNECTION INSTANCE="clocker_0" PORT="in_12288"/>
             <CONNECTION INSTANCE="driver_output_0" PORT="in_mclock"/>
+            <CONNECTION INSTANCE="clocker_0" PORT="in_12288"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">

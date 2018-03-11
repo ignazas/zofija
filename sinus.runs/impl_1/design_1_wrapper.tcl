@@ -60,26 +60,28 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
+  set_param xicom.use_bs_reader 1
   create_project -in_memory -part xc7a35ticsg324-1L
   set_property board_part digilentinc.com:arty-a7-35:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir E:/Development/sinus_v2/sinus_v2/sinus.cache/wt [current_project]
-  set_property parent.project_path E:/Development/sinus_v2/sinus_v2/sinus.xpr [current_project]
-  set_property ip_output_repo E:/Development/sinus_v2/sinus_v2/sinus.cache/ip [current_project]
+  set_property webtalk.parent_dir E:/Development/zofija/sinus.cache/wt [current_project]
+  set_property parent.project_path E:/Development/zofija/sinus.xpr [current_project]
+  set_property ip_output_repo E:/Development/zofija/sinus.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES XPM_CDC [current_project]
-  add_files -quiet E:/Development/sinus_v2/sinus_v2/sinus.runs/synth_1/design_1_wrapper.dcp
+  add_files -quiet E:/Development/zofija/sinus.runs/synth_1/design_1_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files E:/Development/sinus_v2/sinus_v2/sinus.srcs/sources_1/bd/design_1/design_1.bd
+  add_files E:/Development/zofija/sinus.srcs/sources_1/bd/design_1/design_1.bd
   set_param project.isImplRun false
-  read_xdc E:/Development/sinus_v2/sinus_v2/sinus.srcs/constrs_1/imports/Arty_sw_btn_led/Arty_sw_btn_Demo.xdc
+  read_xdc E:/Development/zofija/sinus.srcs/constrs_1/imports/Arty_sw_btn_led/Arty_sw_btn_Demo.xdc
   set_param project.isImplRun true
   link_design -top design_1_wrapper -part xc7a35ticsg324-1L
   set_param project.isImplRun false
