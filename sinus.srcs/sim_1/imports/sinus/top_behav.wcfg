@@ -12,16 +12,16 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="18830251234fs"></ZoomEndTime>
-      <Cursor1Time time="21785530000fs"></Cursor1Time>
+      <ZoomEndTime time="2453550197630fs"></ZoomEndTime>
+      <Cursor1Time time="1001000000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="169"></NameColumnWidth>
-      <ValueColumnWidth column_width="126"></ValueColumnWidth>
+      <ValueColumnWidth column_width="170"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="9" />
+   <WVObjectSize size="11" />
    <wave_markers>
-      <marker time="43843275000" label="" />
+      <marker time="1501105000000" label="" />
    </wave_markers>
    <wvobject fp_name="/top/design_1_i/mclock" type="logic">
       <obj_property name="ElementShortName">mclock</obj_property>
@@ -59,29 +59,35 @@
    <wvobject fp_name="/top/design_1_i/driver_output_0/inst/out_pdata" type="array">
       <obj_property name="ElementShortName">out_pdata[31:0]</obj_property>
       <obj_property name="ObjectShortName">out_pdata[31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
    </wvobject>
    <wvobject fp_name="/top/design_1_i/driver_output_0/inst/bclk_divider" type="array">
       <obj_property name="ElementShortName">bclk_divider[2:0]</obj_property>
       <obj_property name="ObjectShortName">bclk_divider[2:0]</obj_property>
       <obj_property name="Radix">OCTALRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/design_1_i/sinus_sampler_0_audio_data" type="array">
-      <obj_property name="ElementShortName">sinus_sampler_0_audio_data[15:0]</obj_property>
-      <obj_property name="ObjectShortName">sinus_sampler_0_audio_data[15:0]</obj_property>
+   <wvobject fp_name="/top/design_1_i/triangle_sampler_0/inst/audio_data" type="array">
+      <obj_property name="ElementShortName">audio_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">audio_data[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">150</obj_property>
-      <obj_property name="AnalogYRangeMin">-58524.200000</obj_property>
-      <obj_property name="AnalogYRRangeMax">129739.000000</obj_property>
-      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
-      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_CLIP</obj_property>
-      <obj_property name="AnalogHorizLine">0.000000</obj_property>
-      <obj_property name="CustomSignalColor">#0000FF</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="radix_realType">UNSIGNEDFIXEDPOINTRADIX</obj_property>
-      <obj_property name="radix_fractionWidth">0</obj_property>
-      <obj_property name="radix_otherWidth">0</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/square_sampler_0/inst/audio_data" type="array">
+      <obj_property name="ElementShortName">audio_data[15:0]</obj_property>
+      <obj_property name="ObjectShortName">audio_data[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/square_sampler_0/inst/i" type="array">
+      <obj_property name="ElementShortName">i[16:0]</obj_property>
+      <obj_property name="ObjectShortName">i[16:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
 </wave_config>

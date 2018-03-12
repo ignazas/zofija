@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# big_ben, clocker, driver_output, sinus_sampler
+# clocker, driver_output, square_sampler, triangle_sampler
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -176,17 +176,6 @@ proc create_root_design { parentCell } {
    CONFIG.PHASE {0.000} \
  ] $sys_clock
 
-  # Create instance: big_ben_0, and set properties
-  set block_name big_ben
-  set block_cell_name big_ben_0
-  if { [catch {set big_ben_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $big_ben_0 eq "" } {
-     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0 ]
   set_property -dict [ list \
@@ -248,27 +237,38 @@ proc create_root_design { parentCell } {
      return 1
    }
   
-  # Create instance: sinus_sampler_0, and set properties
-  set block_name sinus_sampler
-  set block_cell_name sinus_sampler_0
-  if { [catch {set sinus_sampler_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+  # Create instance: square_sampler_0, and set properties
+  set block_name square_sampler
+  set block_cell_name square_sampler_0
+  if { [catch {set square_sampler_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
      catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
-   } elseif { $sinus_sampler_0 eq "" } {
+   } elseif { $square_sampler_0 eq "" } {
+     catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   }
+  
+  # Create instance: triangle_sampler_0, and set properties
+  set block_name triangle_sampler
+  set block_cell_name triangle_sampler_0
+  if { [catch {set triangle_sampler_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
+     catch {common::send_msg_id "BD_TCL-105" "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
+     return 1
+   } elseif { $triangle_sampler_0 eq "" } {
      catch {common::send_msg_id "BD_TCL-106" "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
      return 1
    }
   
   # Create port connections
-  connect_bd_net -net big_ben_0_out_click [get_bd_pins big_ben_0/out_click] [get_bd_pins sinus_sampler_0/click]
-  connect_bd_net -net clk_wiz_0_clk_100 [get_bd_pins big_ben_0/clk_100_in] [get_bd_pins clk_wiz_0/clk_100]
+  connect_bd_net -net clk_wiz_0_clk_100 [get_bd_pins clk_wiz_0/clk_100] [get_bd_pins square_sampler_0/click] [get_bd_pins triangle_sampler_0/clk100m]
   connect_bd_net -net clk_wiz_0_clk_12288 [get_bd_ports mclock] [get_bd_pins clk_wiz_0/clk_12288] [get_bd_pins clocker_0/in_12288] [get_bd_pins driver_output_0/in_mclock]
   connect_bd_net -net clk_wiz_0_locked [get_bd_ports ok] [get_bd_pins clk_wiz_0/locked]
   connect_bd_net -net clocker_0_out_bclock [get_bd_ports bclock] [get_bd_pins clocker_0/out_bclock] [get_bd_pins driver_output_0/in_bclock]
   connect_bd_net -net clocker_0_out_lrclock [get_bd_ports lrclock] [get_bd_pins clocker_0/out_lrclock] [get_bd_pins driver_output_0/in_lrclock]
   connect_bd_net -net driver_output_0_out_sdata [get_bd_ports sdata] [get_bd_pins driver_output_0/out_sdata]
-  connect_bd_net -net sinus_sampler_0_audio_data [get_bd_pins driver_output_0/in_data_l] [get_bd_pins driver_output_0/in_data_r] [get_bd_pins sinus_sampler_0/audio_data]
+  connect_bd_net -net square_sampler_0_audio_data [get_bd_pins driver_output_0/in_data_r] [get_bd_pins square_sampler_0/audio_data]
   connect_bd_net -net sys_clock_1 [get_bd_ports sys_clock] [get_bd_pins clk_wiz_0/clk_in1]
+  connect_bd_net -net triangle_sampler_0_audio_data [get_bd_pins driver_output_0/in_data_l] [get_bd_pins triangle_sampler_0/audio_data]
 
   # Create address segments
 

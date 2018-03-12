@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Sun Mar 11 22:52:58 2018" VIVADOVERSION="2017.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 12 22:10:57 2018" VIVADOVERSION="2017.4">
 
   <SYSTEMINFO ARCH="artix7" BOARD="digilentinc.com:arty-a7-35:part0:1.0" DEVICE="7a35ti" NAME="design_1" PACKAGE="csg324" SPEEDGRADE="-1L"/>
 
@@ -39,26 +39,6 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE FULLNAME="/big_ben_0" HWVERSION="1.0" INSTANCE="big_ben_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="big_ben" VLNV="xilinx.com:module_ref:big_ben:1.0">
-      <DOCUMENTS/>
-      <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_big_ben_0_0"/>
-        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
-      </PARAMETERS>
-      <PORTS>
-        <PORT DIR="I" NAME="clk_100_in" SIGIS="undef" SIGNAME="clk_wiz_0_clk_100">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_100"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="out_click" SIGIS="undef" SIGNAME="big_ben_0_out_click">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="sinus_sampler_0" PORT="click"/>
-          </CONNECTIONS>
-        </PORT>
-      </PORTS>
-      <BUSINTERFACES/>
-    </MODULE>
     <MODULE FULLNAME="/clk_wiz_0" HWVERSION="5.4" INSTANCE="clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:5.4">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v5_4;d=pg065-clk-wiz.pdf"/>
@@ -636,7 +616,8 @@
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="O" NAME="clk_100" SIGIS="clk" SIGNAME="clk_wiz_0_clk_100">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="big_ben_0" PORT="clk_100_in"/>
+            <CONNECTION INSTANCE="square_sampler_0" PORT="click"/>
+            <CONNECTION INSTANCE="triangle_sampler_0" PORT="clk100m"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="12288135" DIR="O" NAME="clk_12288" SIGIS="clk" SIGNAME="clk_wiz_0_clk_12288">
@@ -703,14 +684,14 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_12288"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="in_data_l" RIGHT="0" SIGIS="undef" SIGNAME="sinus_sampler_0_audio_data">
+        <PORT DIR="I" LEFT="15" NAME="in_data_l" RIGHT="0" SIGIS="undef" SIGNAME="triangle_sampler_0_audio_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sinus_sampler_0" PORT="audio_data"/>
+            <CONNECTION INSTANCE="triangle_sampler_0" PORT="audio_data"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="15" NAME="in_data_r" RIGHT="0" SIGIS="undef" SIGNAME="sinus_sampler_0_audio_data">
+        <PORT DIR="I" LEFT="15" NAME="in_data_r" RIGHT="0" SIGIS="undef" SIGNAME="square_sampler_0_audio_data">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="sinus_sampler_0" PORT="audio_data"/>
+            <CONNECTION INSTANCE="square_sampler_0" PORT="audio_data"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="out_sdata" SIGIS="undef" SIGNAME="driver_output_0_out_sdata">
@@ -721,22 +702,41 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE FULLNAME="/sinus_sampler_0" HWVERSION="1.0" INSTANCE="sinus_sampler_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="sinus_sampler" VLNV="xilinx.com:module_ref:sinus_sampler:1.0">
+    <MODULE FULLNAME="/square_sampler_0" HWVERSION="1.0" INSTANCE="square_sampler_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="square_sampler" VLNV="xilinx.com:module_ref:square_sampler:1.0">
       <DOCUMENTS/>
       <PARAMETERS>
-        <PARAMETER NAME="Component_Name" VALUE="design_1_sinus_sampler_0_0"/>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_square_sampler_0_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="click" SIGIS="undef" SIGNAME="big_ben_0_out_click">
+        <PORT DIR="I" NAME="click" SIGIS="undef" SIGNAME="clk_wiz_0_clk_100">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="big_ben_0" PORT="out_click"/>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_100"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="audio_data" RIGHT="0" SIGIS="undef" SIGNAME="sinus_sampler_0_audio_data">
+        <PORT DIR="O" LEFT="15" NAME="audio_data" RIGHT="0" SIGIS="undef" SIGNAME="square_sampler_0_audio_data">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="driver_output_0" PORT="in_data_r"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES/>
+    </MODULE>
+    <MODULE FULLNAME="/triangle_sampler_0" HWVERSION="1.0" INSTANCE="triangle_sampler_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="triangle_sampler" VLNV="xilinx.com:module_ref:triangle_sampler:1.0">
+      <DOCUMENTS/>
+      <PARAMETERS>
+        <PARAMETER NAME="Component_Name" VALUE="design_1_triangle_sampler_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT DIR="I" NAME="clk100m" SIGIS="undef" SIGNAME="clk_wiz_0_clk_100">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_100"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="audio_data" RIGHT="0" SIGIS="undef" SIGNAME="triangle_sampler_0_audio_data">
           <CONNECTIONS>
             <CONNECTION INSTANCE="driver_output_0" PORT="in_data_l"/>
-            <CONNECTION INSTANCE="driver_output_0" PORT="in_data_r"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

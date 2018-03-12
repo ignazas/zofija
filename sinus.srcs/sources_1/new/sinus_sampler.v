@@ -116,7 +116,6 @@ module sinus_sampler(
 		always@ (posedge(click))
 		begin
 			 audio_data = sine[i];
-			 //audio_data <= 16'b1111000000001111;
 			 i <= i + 1;
 			 if(i == 99)
 				i <= 0;
