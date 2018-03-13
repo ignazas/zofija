@@ -11,7 +11,7 @@ module triangle_sampler(
 
 		always@ (posedge(clk100m))
 		begin
-			 audio_data = audio_data + 1; // 65 535
+			 audio_data <= audio_data + 1; // 65 535
 			 if (audio_data >= 32500) begin
 			 	audio_data <= -32500;
 			 end

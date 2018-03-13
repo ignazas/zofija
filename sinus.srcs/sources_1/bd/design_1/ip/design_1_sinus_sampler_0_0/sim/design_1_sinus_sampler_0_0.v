@@ -47,22 +47,22 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:triangle_sampler:1.0
+// IP VLNV: xilinx.com:module_ref:sinus_sampler:1.0
 // IP Revision: 1
 
 `timescale 1ns/1ps
 
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module design_1_triangle_sampler_0_0 (
-  clk100m,
+module design_1_sinus_sampler_0_0 (
+  click,
   audio_data
 );
 
-input wire clk100m;
+input wire click;
 output wire [15 : 0] audio_data;
 
-  triangle_sampler inst (
-    .clk100m(clk100m),
+  sinus_sampler inst (
+    .click(click),
     .audio_data(audio_data)
   );
 endmodule

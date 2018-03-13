@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1520885469">
+<GenRun Id="impl_1" LaunchPart="xc7a35ticsg324-1L" LaunchTime="1520974802">
   <File Type="PWROPT-DCP" Name="design_1_wrapper_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="design_1_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
@@ -79,17 +79,26 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/triangle_sampler.v">
+    <File Path="$PSRCDIR/sources_1/imports/new/square_sampler.v">
+      <FileInfo>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/square_sampler.v"/>
+        <Attr Name="ImportTime" Val="1520431139"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/sinus_sampler.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/square_sampler.v">
+    <File Path="$PSRCDIR/sources_1/imports/new/big_ben.v">
       <FileInfo>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/square_sampler.v"/>
-        <Attr Name="ImportTime" Val="1520431139"/>
+        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/big_ben.v"/>
+        <Attr Name="ImportTime" Val="1520005808"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -111,17 +120,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/imports/new/big_ben.v">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="ImportPath" Val="$PSRCDIR/sources_1/new/big_ben.v"/>
-        <Attr Name="ImportTime" Val="1520005808"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PSRCDIR/sources_1/new/sinus_sampler.v">
+    <File Path="$PSRCDIR/sources_1/new/triangle_sampler.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -165,6 +164,7 @@
   </Strategy>
   <BlockFileSet Type="BlockSrcs" Name="design_1_driver_output_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_clocker_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_triangle_sampler_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_sinus_sampler_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_square_sampler_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_big_ben_0_0"/>
 </GenRun>

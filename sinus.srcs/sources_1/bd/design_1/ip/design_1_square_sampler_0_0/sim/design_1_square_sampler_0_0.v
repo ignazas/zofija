@@ -47,23 +47,22 @@
 // DO NOT MODIFY THIS FILE.
 
 
-// IP VLNV: xilinx.com:module_ref:triangle_sampler:1.0
+// IP VLNV: xilinx.com:module_ref:square_sampler:1.0
 // IP Revision: 1
 
-(* X_CORE_INFO = "triangle_sampler,Vivado 2017.4" *)
-(* CHECK_LICENSE_TYPE = "design_1_triangle_sampler_0_0,triangle_sampler,{}" *)
-(* CORE_GENERATION_INFO = "design_1_triangle_sampler_0_0,triangle_sampler,{x_ipProduct=Vivado 2017.4,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=triangle_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
+`timescale 1ns/1ps
+
 (* DowngradeIPIdentifiedWarnings = "yes" *)
-module design_1_triangle_sampler_0_0 (
-  clk100m,
+module design_1_square_sampler_0_0 (
+  click,
   audio_data
 );
 
-input wire clk100m;
+input wire click;
 output wire [15 : 0] audio_data;
 
-  triangle_sampler inst (
-    .clk100m(clk100m),
+  square_sampler inst (
+    .click(click),
     .audio_data(audio_data)
   );
 endmodule
