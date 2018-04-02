@@ -1,15 +1,16 @@
 `timescale 1ns / 1ps
 
 module sinus_sampler(
-		input click,
+		input clock,
 		output reg signed [15:0] audio_data
 		);
 		
 		reg signed [15:0] sine [0:99];
-		integer i;
-
-		// Sine lookup table of 100 samples
+		reg [9:0] freq_counter;
+		reg [6:0] i;
+	
 		initial begin
+			freq_counter = 0;
 			i = 0;
 			sine[0] = 0;
 			sine[1] = 2057;
@@ -62,16 +63,16 @@ module sinus_sampler(
 			sine[48] = 4106;
 			sine[49] = 2057;
 			sine[50] = 0;
-			sine[51] = -2058;
-			sine[52] = -4107;
-			sine[53] = -6141;
-			sine[54] = -8149;
-			sine[55] = -10126;
-			sine[56] = -12063;
-			sine[57] = -13952;
-			sine[58] = -15786;
-			sine[59] = -17558;
-			sine[60] = -19261;
+			sine[51] = -2057;
+			sine[52] = -4106;
+			sine[53] = -6140;
+			sine[54] = -8148;
+			sine[55] = -10125;
+			sine[56] = -12062;
+			sine[57] = -13951;
+			sine[58] = -15785;
+			sine[59] = -17557;
+			sine[60] = -19261;//
 			sine[61] = -20887;
 			sine[62] = -22431;
 			sine[63] = -23887;
@@ -104,21 +105,27 @@ module sinus_sampler(
 			sine[90] = -19261;
 			sine[91] = -17558;
 			sine[92] = -15786;
-			sine[93] = -13952;
-			sine[94] = -12063;
-			sine[95] = -10126;
-			sine[96] = -8149;
-			sine[97] = -6141;
-			sine[98] = -4107;
-			sine[99] = -2058;
+			sine[93] = -13952;//
+			sine[94] = -12062;
+			sine[95] = -10125;
+			sine[96] = -8148;
+			sine[97] = -6140;
+			sine[98] = -4106;
+			sine[99] = -2057;
 		end
 
-		always@ (posedge(click))
+		always@ (posedge(clock))
 		begin
-			 audio_data = sine[i];
-			 i <= i + 1;
-			 if(i == 99)
-				i <= 0;
-		end
-
+			if(freq_counter == 999)
+            begin
+        		audio_data <= sine[i];
+        		i = i + 1;
+            	if (i == 100) begin
+            		i <= 0;
+            	end
+                freq_counter <= 0;
+            end else begin
+                freq_counter <= freq_counter + 1;
+            end
+        end
 endmodule

@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.4 (win64) Build 2086221 Fri Dec 15 20:55:39 MST 2017
--- Date        : Tue Mar 13 23:00:42 2018
+-- Date        : Sat Mar 31 21:37:49 2018
 -- Host        : Saldytuvas running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               e:/Development/zofija/sinus.srcs/sources_1/bd/design_1/ip/design_1_sinus_sampler_0_0/design_1_sinus_sampler_0_0_sim_netlist.vhdl
@@ -17,67 +17,32 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_1_sinus_sampler_0_0_sinus_sampler is
   port (
     audio_data : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    click : in STD_LOGIC
+    clock : in STD_LOGIC
   );
   attribute ORIG_REF_NAME : string;
   attribute ORIG_REF_NAME of design_1_sinus_sampler_0_0_sinus_sampler : entity is "sinus_sampler";
 end design_1_sinus_sampler_0_0_sinus_sampler;
 
 architecture STRUCTURE of design_1_sinus_sampler_0_0_sinus_sampler is
-  signal data0 : STD_LOGIC_VECTOR ( 31 downto 1 );
-  signal i : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal \i[0]_i_1_n_0\ : STD_LOGIC;
-  signal \i[31]_i_10_n_0\ : STD_LOGIC;
-  signal \i[31]_i_1_n_0\ : STD_LOGIC;
-  signal \i[31]_i_3_n_0\ : STD_LOGIC;
-  signal \i[31]_i_4_n_0\ : STD_LOGIC;
-  signal \i[31]_i_5_n_0\ : STD_LOGIC;
-  signal \i[31]_i_6_n_0\ : STD_LOGIC;
-  signal \i[31]_i_7_n_0\ : STD_LOGIC;
-  signal \i[31]_i_8_n_0\ : STD_LOGIC;
-  signal \i[31]_i_9_n_0\ : STD_LOGIC;
-  signal \i_reg[12]_i_1_n_0\ : STD_LOGIC;
-  signal \i_reg[12]_i_1_n_1\ : STD_LOGIC;
-  signal \i_reg[12]_i_1_n_2\ : STD_LOGIC;
-  signal \i_reg[12]_i_1_n_3\ : STD_LOGIC;
-  signal \i_reg[16]_i_1_n_0\ : STD_LOGIC;
-  signal \i_reg[16]_i_1_n_1\ : STD_LOGIC;
-  signal \i_reg[16]_i_1_n_2\ : STD_LOGIC;
-  signal \i_reg[16]_i_1_n_3\ : STD_LOGIC;
-  signal \i_reg[20]_i_1_n_0\ : STD_LOGIC;
-  signal \i_reg[20]_i_1_n_1\ : STD_LOGIC;
-  signal \i_reg[20]_i_1_n_2\ : STD_LOGIC;
-  signal \i_reg[20]_i_1_n_3\ : STD_LOGIC;
-  signal \i_reg[24]_i_1_n_0\ : STD_LOGIC;
-  signal \i_reg[24]_i_1_n_1\ : STD_LOGIC;
-  signal \i_reg[24]_i_1_n_2\ : STD_LOGIC;
-  signal \i_reg[24]_i_1_n_3\ : STD_LOGIC;
-  signal \i_reg[28]_i_1_n_0\ : STD_LOGIC;
-  signal \i_reg[28]_i_1_n_1\ : STD_LOGIC;
-  signal \i_reg[28]_i_1_n_2\ : STD_LOGIC;
-  signal \i_reg[28]_i_1_n_3\ : STD_LOGIC;
-  signal \i_reg[31]_i_2_n_2\ : STD_LOGIC;
-  signal \i_reg[31]_i_2_n_3\ : STD_LOGIC;
-  signal \i_reg[4]_i_1_n_0\ : STD_LOGIC;
-  signal \i_reg[4]_i_1_n_1\ : STD_LOGIC;
-  signal \i_reg[4]_i_1_n_2\ : STD_LOGIC;
-  signal \i_reg[4]_i_1_n_3\ : STD_LOGIC;
-  signal \i_reg[8]_i_1_n_0\ : STD_LOGIC;
-  signal \i_reg[8]_i_1_n_1\ : STD_LOGIC;
-  signal \i_reg[8]_i_1_n_2\ : STD_LOGIC;
-  signal \i_reg[8]_i_1_n_3\ : STD_LOGIC;
-  signal \i_reg_rep_n_0_[0]\ : STD_LOGIC;
-  signal \i_reg_rep_n_0_[1]\ : STD_LOGIC;
-  signal \i_reg_rep_n_0_[2]\ : STD_LOGIC;
-  signal \i_reg_rep_n_0_[3]\ : STD_LOGIC;
-  signal \i_reg_rep_n_0_[4]\ : STD_LOGIC;
-  signal \i_reg_rep_n_0_[5]\ : STD_LOGIC;
-  signal \i_reg_rep_n_0_[6]\ : STD_LOGIC;
+  signal audio_data_1 : STD_LOGIC;
+  signal audio_data_reg_i_2_n_0 : STD_LOGIC;
+  signal freq_counter : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal \freq_counter[3]_i_2_n_0\ : STD_LOGIC;
+  signal \freq_counter[3]_i_3_n_0\ : STD_LOGIC;
+  signal \freq_counter[5]_i_2_n_0\ : STD_LOGIC;
+  signal \freq_counter[6]_i_2_n_0\ : STD_LOGIC;
+  signal \freq_counter[6]_i_3_n_0\ : STD_LOGIC;
+  signal \freq_counter[6]_i_4_n_0\ : STD_LOGIC;
+  signal freq_counter_0 : STD_LOGIC_VECTOR ( 9 downto 0 );
+  signal i : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal \i_reg__0\ : STD_LOGIC_VECTOR ( 6 downto 0 );
+  signal \i_rep[6]_i_1_n_0\ : STD_LOGIC;
+  signal \i_rep[6]_i_3_n_0\ : STD_LOGIC;
+  signal \i_rep[6]_i_4_n_0\ : STD_LOGIC;
+  signal p_0_in : STD_LOGIC_VECTOR ( 6 downto 0 );
   signal NLW_audio_data_reg_DOBDO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal NLW_audio_data_reg_DOPADOP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal NLW_audio_data_reg_DOPBDOP_UNCONNECTED : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal \NLW_i_reg[31]_i_2_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 2 );
-  signal \NLW_i_reg[31]_i_2_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ : string;
   attribute \MEM.PORTA.DATA_BIT_LAYOUT\ of audio_data_reg : label is "p0_d16";
   attribute METHODOLOGY_DRC_VIOS : string;
@@ -95,9 +60,22 @@ architecture STRUCTURE of design_1_sinus_sampler_0_0_sinus_sampler is
   attribute bram_slice_end : integer;
   attribute bram_slice_end of audio_data_reg : label is 15;
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \i[0]_i_1\ : label is "soft_lutpair0";
-  attribute SOFT_HLUTNM of \i[31]_i_4\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of audio_data_reg_i_2 : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \freq_counter[1]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \freq_counter[2]_i_1\ : label is "soft_lutpair1";
+  attribute SOFT_HLUTNM of \freq_counter[3]_i_2\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \freq_counter[3]_i_3\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \freq_counter[4]_i_1\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \freq_counter[6]_i_2\ : label is "soft_lutpair0";
+  attribute SOFT_HLUTNM of \freq_counter[6]_i_4\ : label is "soft_lutpair3";
   attribute equivalent_register_removal : string;
+  attribute equivalent_register_removal of \i_reg[0]\ : label is "no";
+  attribute equivalent_register_removal of \i_reg[1]\ : label is "no";
+  attribute equivalent_register_removal of \i_reg[2]\ : label is "no";
+  attribute equivalent_register_removal of \i_reg[3]\ : label is "no";
+  attribute equivalent_register_removal of \i_reg[4]\ : label is "no";
+  attribute equivalent_register_removal of \i_reg[5]\ : label is "no";
+  attribute equivalent_register_removal of \i_reg[6]\ : label is "no";
   attribute equivalent_register_removal of \i_reg_rep[0]\ : label is "no";
   attribute equivalent_register_removal of \i_reg_rep[1]\ : label is "no";
   attribute equivalent_register_removal of \i_reg_rep[2]\ : label is "no";
@@ -105,6 +83,12 @@ architecture STRUCTURE of design_1_sinus_sampler_0_0_sinus_sampler is
   attribute equivalent_register_removal of \i_reg_rep[4]\ : label is "no";
   attribute equivalent_register_removal of \i_reg_rep[5]\ : label is "no";
   attribute equivalent_register_removal of \i_reg_rep[6]\ : label is "no";
+  attribute SOFT_HLUTNM of \i_rep[0]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \i_rep[1]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \i_rep[2]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \i_rep[3]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \i_rep[4]_i_1\ : label is "soft_lutpair2";
+  attribute SOFT_HLUTNM of \i_rep[6]_i_4\ : label is "soft_lutpair4";
 begin
 audio_data_reg: unisim.vcomponents.RAMB18E1
     generic map(
@@ -121,10 +105,10 @@ audio_data_reg: unisim.vcomponents.RAMB18E1
       INIT_00 => X"678D629F5D4E579E51964B3C44953DA9367F2F1E278D1FD417FC100A08090000",
       INIT_01 => X"770279BB7BFA7DBB7EFD7FBE7FFF7FBE7EFD7DBB7BFA79BB770273D0702A6C12",
       INIT_02 => X"17FC1FD4278D2F1E367F3DA944954B3C5196579E5D4E629F678D6C12702A73D0",
-      INIT_03 => X"A2B1A861AE69B4C3BB6AC256C980D0E1D872E02BE803EFF5F7F600000809100A",
+      INIT_03 => X"A2B1A861AE69B4C3BB6BC257C981D0E2D873E02CE804EFF6F7F700000809100A",
       INIT_04 => X"840582448102804180008041810282448405864488FD8C2F8FD593ED98729D60",
-      INIT_05 => X"D872D0E1C980C256BB6AB4C3AE69A861A2B19D60987293ED8FD58C2F88FD8644",
-      INIT_06 => X"000000000000000000000000000000000000000000000000F7F6EFF5E803E02B",
+      INIT_05 => X"D873D0E2C980C256BB6AB4C3AE69A861A2B19D60987293ED8FD58C2F88FD8644",
+      INIT_06 => X"000000000000000000000000000000000000000000000000F7F7EFF6E804E02C",
       INIT_07 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_08 => X"0000000000000000000000000000000000000000000000000000000000000000",
       INIT_09 => X"0000000000000000000000000000000000000000000000000000000000000000",
@@ -201,16 +185,10 @@ audio_data_reg: unisim.vcomponents.RAMB18E1
     )
         port map (
       ADDRARDADDR(13 downto 11) => B"000",
-      ADDRARDADDR(10) => \i_reg_rep_n_0_[6]\,
-      ADDRARDADDR(9) => \i_reg_rep_n_0_[5]\,
-      ADDRARDADDR(8) => \i_reg_rep_n_0_[4]\,
-      ADDRARDADDR(7) => \i_reg_rep_n_0_[3]\,
-      ADDRARDADDR(6) => \i_reg_rep_n_0_[2]\,
-      ADDRARDADDR(5) => \i_reg_rep_n_0_[1]\,
-      ADDRARDADDR(4) => \i_reg_rep_n_0_[0]\,
+      ADDRARDADDR(10 downto 4) => i(6 downto 0),
       ADDRARDADDR(3 downto 0) => B"0000",
       ADDRBWRADDR(13 downto 0) => B"11111111111111",
-      CLKARDCLK => click,
+      CLKARDCLK => clock,
       CLKBWRCLK => '0',
       DIADI(15 downto 0) => B"1111111111111111",
       DIBDI(15 downto 0) => B"1111111111111111",
@@ -220,7 +198,7 @@ audio_data_reg: unisim.vcomponents.RAMB18E1
       DOBDO(15 downto 0) => NLW_audio_data_reg_DOBDO_UNCONNECTED(15 downto 0),
       DOPADOP(1 downto 0) => NLW_audio_data_reg_DOPADOP_UNCONNECTED(1 downto 0),
       DOPBDOP(1 downto 0) => NLW_audio_data_reg_DOPBDOP_UNCONNECTED(1 downto 0),
-      ENARDEN => '1',
+      ENARDEN => audio_data_1,
       ENBWREN => '0',
       REGCEAREGCE => '0',
       REGCEB => '0',
@@ -231,642 +209,588 @@ audio_data_reg: unisim.vcomponents.RAMB18E1
       WEA(1 downto 0) => B"00",
       WEBWE(3 downto 0) => B"0000"
     );
-\i[0]_i_1\: unisim.vcomponents.LUT1
+audio_data_reg_i_1: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000000004000"
+    )
+        port map (
+      I0 => freq_counter(3),
+      I1 => freq_counter(8),
+      I2 => freq_counter(7),
+      I3 => freq_counter(9),
+      I4 => freq_counter(4),
+      I5 => audio_data_reg_i_2_n_0,
+      O => audio_data_1
+    );
+audio_data_reg_i_2: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFFFFFF"
+    )
+        port map (
+      I0 => freq_counter(6),
+      I1 => freq_counter(5),
+      I2 => freq_counter(2),
+      I3 => freq_counter(0),
+      I4 => freq_counter(1),
+      O => audio_data_reg_i_2_n_0
+    );
+\freq_counter[0]_i_1\: unisim.vcomponents.LUT1
     generic map(
       INIT => X"1"
     )
         port map (
-      I0 => i(0),
-      O => \i[0]_i_1_n_0\
+      I0 => freq_counter(0),
+      O => freq_counter_0(0)
     );
-\i[31]_i_1\: unisim.vcomponents.LUT4
+\freq_counter[1]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"0001"
+      INIT => X"6"
     )
         port map (
-      I0 => \i[31]_i_3_n_0\,
-      I1 => \i[31]_i_4_n_0\,
-      I2 => \i[31]_i_5_n_0\,
-      I3 => \i[31]_i_6_n_0\,
-      O => \i[31]_i_1_n_0\
+      I0 => freq_counter(0),
+      I1 => freq_counter(1),
+      O => freq_counter_0(1)
     );
-\i[31]_i_10\: unisim.vcomponents.LUT4
+\freq_counter[2]_i_1\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FFFE"
+      INIT => X"78"
     )
         port map (
-      I0 => i(10),
-      I1 => i(11),
-      I2 => i(8),
-      I3 => i(9),
-      O => \i[31]_i_10_n_0\
+      I0 => freq_counter(1),
+      I1 => freq_counter(0),
+      I2 => freq_counter(2),
+      O => freq_counter_0(2)
     );
-\i[31]_i_3\: unisim.vcomponents.LUT5
+\freq_counter[3]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFE"
+      INIT => X"FF0000BF"
     )
         port map (
-      I0 => i(21),
-      I1 => i(20),
-      I2 => i(23),
-      I3 => i(22),
-      I4 => \i[31]_i_7_n_0\,
-      O => \i[31]_i_3_n_0\
+      I0 => \freq_counter[3]_i_2_n_0\,
+      I1 => freq_counter(6),
+      I2 => freq_counter(5),
+      I3 => \freq_counter[3]_i_3_n_0\,
+      I4 => freq_counter(3),
+      O => freq_counter_0(3)
     );
-\i[31]_i_4\: unisim.vcomponents.LUT5
+\freq_counter[3]_i_2\: unisim.vcomponents.LUT4
     generic map(
-      INIT => X"FFFF7FFF"
+      INIT => X"FF7F"
     )
         port map (
-      I0 => i(1),
-      I1 => i(5),
-      I2 => i(6),
-      I3 => i(0),
-      I4 => \i[31]_i_8_n_0\,
-      O => \i[31]_i_4_n_0\
+      I0 => freq_counter(8),
+      I1 => freq_counter(7),
+      I2 => freq_counter(9),
+      I3 => freq_counter(4),
+      O => \freq_counter[3]_i_2_n_0\
     );
-\i[31]_i_5\: unisim.vcomponents.LUT5
+\freq_counter[3]_i_3\: unisim.vcomponents.LUT3
     generic map(
-      INIT => X"FFFFFFFE"
+      INIT => X"7F"
     )
         port map (
-      I0 => i(28),
-      I1 => i(4),
-      I2 => i(7),
-      I3 => i(27),
-      I4 => \i[31]_i_9_n_0\,
-      O => \i[31]_i_5_n_0\
+      I0 => freq_counter(1),
+      I1 => freq_counter(0),
+      I2 => freq_counter(2),
+      O => \freq_counter[3]_i_3_n_0\
     );
-\i[31]_i_6\: unisim.vcomponents.LUT5
+\freq_counter[4]_i_1\: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"FFFFFFFE"
+      INIT => X"7FFF8000"
     )
         port map (
-      I0 => i(13),
-      I1 => i(12),
-      I2 => i(15),
-      I3 => i(14),
-      I4 => \i[31]_i_10_n_0\,
-      O => \i[31]_i_6_n_0\
+      I0 => freq_counter(3),
+      I1 => freq_counter(1),
+      I2 => freq_counter(0),
+      I3 => freq_counter(2),
+      I4 => freq_counter(4),
+      O => freq_counter_0(4)
     );
-\i[31]_i_7\: unisim.vcomponents.LUT4
+\freq_counter[5]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
+      INIT => X"FFF0FFF0FFF0F1F0"
     )
         port map (
-      I0 => i(18),
-      I1 => i(19),
-      I2 => i(16),
-      I3 => i(17),
-      O => \i[31]_i_7_n_0\
+      I0 => freq_counter(6),
+      I1 => freq_counter(3),
+      I2 => \freq_counter[5]_i_2_n_0\,
+      I3 => freq_counter(5),
+      I4 => \freq_counter[6]_i_3_n_0\,
+      I5 => \freq_counter[6]_i_4_n_0\,
+      O => freq_counter_0(5)
     );
-\i[31]_i_8\: unisim.vcomponents.LUT4
+\freq_counter[5]_i_2\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
+      INIT => X"4000000000000000"
     )
         port map (
-      I0 => i(26),
-      I1 => i(30),
-      I2 => i(24),
-      I3 => i(25),
-      O => \i[31]_i_8_n_0\
+      I0 => freq_counter(5),
+      I1 => freq_counter(4),
+      I2 => freq_counter(3),
+      I3 => freq_counter(1),
+      I4 => freq_counter(0),
+      I5 => freq_counter(2),
+      O => \freq_counter[5]_i_2_n_0\
     );
-\i[31]_i_9\: unisim.vcomponents.LUT4
+\freq_counter[6]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
+      INIT => X"FF08FF08FF085508"
     )
         port map (
-      I0 => i(2),
-      I1 => i(3),
-      I2 => i(31),
-      I3 => i(29),
-      O => \i[31]_i_9_n_0\
+      I0 => freq_counter(5),
+      I1 => freq_counter(4),
+      I2 => \freq_counter[6]_i_2_n_0\,
+      I3 => freq_counter(6),
+      I4 => \freq_counter[6]_i_3_n_0\,
+      I5 => \freq_counter[6]_i_4_n_0\,
+      O => freq_counter_0(6)
+    );
+\freq_counter[6]_i_2\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7FFF"
+    )
+        port map (
+      I0 => freq_counter(2),
+      I1 => freq_counter(0),
+      I2 => freq_counter(1),
+      I3 => freq_counter(3),
+      O => \freq_counter[6]_i_2_n_0\
+    );
+\freq_counter[6]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"15FFFFFFFFFFFFFF"
+    )
+        port map (
+      I0 => freq_counter(3),
+      I1 => freq_counter(7),
+      I2 => freq_counter(8),
+      I3 => freq_counter(2),
+      I4 => freq_counter(0),
+      I5 => freq_counter(1),
+      O => \freq_counter[6]_i_3_n_0\
+    );
+\freq_counter[6]_i_4\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"67"
+    )
+        port map (
+      I0 => freq_counter(3),
+      I1 => freq_counter(4),
+      I2 => freq_counter(9),
+      O => \freq_counter[6]_i_4_n_0\
+    );
+\freq_counter[7]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C3C3CCCCCCCCC4CC"
+    )
+        port map (
+      I0 => freq_counter(8),
+      I1 => freq_counter(7),
+      I2 => audio_data_reg_i_2_n_0,
+      I3 => freq_counter(9),
+      I4 => freq_counter(4),
+      I5 => freq_counter(3),
+      O => freq_counter_0(7)
+    );
+\freq_counter[8]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"C6C6CCCCCCCCC4CC"
+    )
+        port map (
+      I0 => freq_counter(7),
+      I1 => freq_counter(8),
+      I2 => audio_data_reg_i_2_n_0,
+      I3 => freq_counter(9),
+      I4 => freq_counter(4),
+      I5 => freq_counter(3),
+      O => freq_counter_0(8)
+    );
+\freq_counter[9]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F0F0F0F068F0F0F0"
+    )
+        port map (
+      I0 => freq_counter(3),
+      I1 => freq_counter(4),
+      I2 => freq_counter(9),
+      I3 => freq_counter(7),
+      I4 => freq_counter(8),
+      I5 => audio_data_reg_i_2_n_0,
+      O => freq_counter_0(9)
+    );
+\freq_counter_reg[0]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(0),
+      Q => freq_counter(0),
+      R => '0'
+    );
+\freq_counter_reg[1]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(1),
+      Q => freq_counter(1),
+      R => '0'
+    );
+\freq_counter_reg[2]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(2),
+      Q => freq_counter(2),
+      R => '0'
+    );
+\freq_counter_reg[3]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(3),
+      Q => freq_counter(3),
+      R => '0'
+    );
+\freq_counter_reg[4]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(4),
+      Q => freq_counter(4),
+      R => '0'
+    );
+\freq_counter_reg[5]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(5),
+      Q => freq_counter(5),
+      R => '0'
+    );
+\freq_counter_reg[6]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(6),
+      Q => freq_counter(6),
+      R => '0'
+    );
+\freq_counter_reg[7]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(7),
+      Q => freq_counter(7),
+      R => '0'
+    );
+\freq_counter_reg[8]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(8),
+      Q => freq_counter(8),
+      R => '0'
+    );
+\freq_counter_reg[9]\: unisim.vcomponents.FDRE
+    generic map(
+      INIT => '0'
+    )
+        port map (
+      C => clock,
+      CE => '1',
+      D => freq_counter_0(9),
+      Q => freq_counter(9),
+      R => '0'
     );
 \i_reg[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => \i[0]_i_1_n_0\,
-      Q => i(0),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[10]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(10),
-      Q => i(10),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[11]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(11),
-      Q => i(11),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[12]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(12),
-      Q => i(12),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[12]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \i_reg[8]_i_1_n_0\,
-      CO(3) => \i_reg[12]_i_1_n_0\,
-      CO(2) => \i_reg[12]_i_1_n_1\,
-      CO(1) => \i_reg[12]_i_1_n_2\,
-      CO(0) => \i_reg[12]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(12 downto 9),
-      S(3 downto 0) => i(12 downto 9)
-    );
-\i_reg[13]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(13),
-      Q => i(13),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[14]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(14),
-      Q => i(14),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[15]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(15),
-      Q => i(15),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[16]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(16),
-      Q => i(16),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[16]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \i_reg[12]_i_1_n_0\,
-      CO(3) => \i_reg[16]_i_1_n_0\,
-      CO(2) => \i_reg[16]_i_1_n_1\,
-      CO(1) => \i_reg[16]_i_1_n_2\,
-      CO(0) => \i_reg[16]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(16 downto 13),
-      S(3 downto 0) => i(16 downto 13)
-    );
-\i_reg[17]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(17),
-      Q => i(17),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[18]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(18),
-      Q => i(18),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[19]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(19),
-      Q => i(19),
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(0),
+      Q => \i_reg__0\(0),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(1),
-      Q => i(1),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[20]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(20),
-      Q => i(20),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[20]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \i_reg[16]_i_1_n_0\,
-      CO(3) => \i_reg[20]_i_1_n_0\,
-      CO(2) => \i_reg[20]_i_1_n_1\,
-      CO(1) => \i_reg[20]_i_1_n_2\,
-      CO(0) => \i_reg[20]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(20 downto 17),
-      S(3 downto 0) => i(20 downto 17)
-    );
-\i_reg[21]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(21),
-      Q => i(21),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[22]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(22),
-      Q => i(22),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[23]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(23),
-      Q => i(23),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[24]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(24),
-      Q => i(24),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[24]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \i_reg[20]_i_1_n_0\,
-      CO(3) => \i_reg[24]_i_1_n_0\,
-      CO(2) => \i_reg[24]_i_1_n_1\,
-      CO(1) => \i_reg[24]_i_1_n_2\,
-      CO(0) => \i_reg[24]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(24 downto 21),
-      S(3 downto 0) => i(24 downto 21)
-    );
-\i_reg[25]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(25),
-      Q => i(25),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[26]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(26),
-      Q => i(26),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[27]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(27),
-      Q => i(27),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[28]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(28),
-      Q => i(28),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[28]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \i_reg[24]_i_1_n_0\,
-      CO(3) => \i_reg[28]_i_1_n_0\,
-      CO(2) => \i_reg[28]_i_1_n_1\,
-      CO(1) => \i_reg[28]_i_1_n_2\,
-      CO(0) => \i_reg[28]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(28 downto 25),
-      S(3 downto 0) => i(28 downto 25)
-    );
-\i_reg[29]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(29),
-      Q => i(29),
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(1),
+      Q => \i_reg__0\(1),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg[2]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(2),
-      Q => i(2),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[30]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(30),
-      Q => i(30),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[31]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(31),
-      Q => i(31),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[31]_i_2\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \i_reg[28]_i_1_n_0\,
-      CO(3 downto 2) => \NLW_i_reg[31]_i_2_CO_UNCONNECTED\(3 downto 2),
-      CO(1) => \i_reg[31]_i_2_n_2\,
-      CO(0) => \i_reg[31]_i_2_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3) => \NLW_i_reg[31]_i_2_O_UNCONNECTED\(3),
-      O(2 downto 0) => data0(31 downto 29),
-      S(3) => '0',
-      S(2 downto 0) => i(31 downto 29)
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(2),
+      Q => \i_reg__0\(2),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg[3]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(3),
-      Q => i(3),
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(3),
+      Q => \i_reg__0\(3),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg[4]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(4),
-      Q => i(4),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[4]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => '0',
-      CO(3) => \i_reg[4]_i_1_n_0\,
-      CO(2) => \i_reg[4]_i_1_n_1\,
-      CO(1) => \i_reg[4]_i_1_n_2\,
-      CO(0) => \i_reg[4]_i_1_n_3\,
-      CYINIT => i(0),
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(4 downto 1),
-      S(3 downto 0) => i(4 downto 1)
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(4),
+      Q => \i_reg__0\(4),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg[5]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(5),
-      Q => i(5),
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(5),
+      Q => \i_reg__0\(5),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg[6]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(6),
-      Q => i(6),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[7]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(7),
-      Q => i(7),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[8]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(8),
-      Q => i(8),
-      R => \i[31]_i_1_n_0\
-    );
-\i_reg[8]_i_1\: unisim.vcomponents.CARRY4
-     port map (
-      CI => \i_reg[4]_i_1_n_0\,
-      CO(3) => \i_reg[8]_i_1_n_0\,
-      CO(2) => \i_reg[8]_i_1_n_1\,
-      CO(1) => \i_reg[8]_i_1_n_2\,
-      CO(0) => \i_reg[8]_i_1_n_3\,
-      CYINIT => '0',
-      DI(3 downto 0) => B"0000",
-      O(3 downto 0) => data0(8 downto 5),
-      S(3 downto 0) => i(8 downto 5)
-    );
-\i_reg[9]\: unisim.vcomponents.FDRE
-    generic map(
-      INIT => '0'
-    )
-        port map (
-      C => click,
-      CE => '1',
-      D => data0(9),
-      Q => i(9),
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(6),
+      Q => \i_reg__0\(6),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg_rep[0]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => \i[0]_i_1_n_0\,
-      Q => \i_reg_rep_n_0_[0]\,
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(0),
+      Q => i(0),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg_rep[1]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(1),
-      Q => \i_reg_rep_n_0_[1]\,
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(1),
+      Q => i(1),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg_rep[2]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(2),
-      Q => \i_reg_rep_n_0_[2]\,
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(2),
+      Q => i(2),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg_rep[3]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(3),
-      Q => \i_reg_rep_n_0_[3]\,
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(3),
+      Q => i(3),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg_rep[4]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(4),
-      Q => \i_reg_rep_n_0_[4]\,
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(4),
+      Q => i(4),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg_rep[5]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(5),
-      Q => \i_reg_rep_n_0_[5]\,
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(5),
+      Q => i(5),
+      R => \i_rep[6]_i_1_n_0\
     );
 \i_reg_rep[6]\: unisim.vcomponents.FDRE
     generic map(
       INIT => '0'
     )
         port map (
-      C => click,
-      CE => '1',
-      D => data0(6),
-      Q => \i_reg_rep_n_0_[6]\,
-      R => \i[31]_i_1_n_0\
+      C => clock,
+      CE => audio_data_1,
+      D => p_0_in(6),
+      Q => i(6),
+      R => \i_rep[6]_i_1_n_0\
+    );
+\i_rep[0]_i_1\: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => \i_reg__0\(0),
+      O => p_0_in(0)
+    );
+\i_rep[1]_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => \i_reg__0\(0),
+      I1 => \i_reg__0\(1),
+      O => p_0_in(1)
+    );
+\i_rep[2]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"78"
+    )
+        port map (
+      I0 => \i_reg__0\(1),
+      I1 => \i_reg__0\(0),
+      I2 => \i_reg__0\(2),
+      O => p_0_in(2)
+    );
+\i_rep[3]_i_1\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"7F80"
+    )
+        port map (
+      I0 => \i_reg__0\(2),
+      I1 => \i_reg__0\(0),
+      I2 => \i_reg__0\(1),
+      I3 => \i_reg__0\(3),
+      O => p_0_in(3)
+    );
+\i_rep[4]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"7FFF8000"
+    )
+        port map (
+      I0 => \i_reg__0\(3),
+      I1 => \i_reg__0\(1),
+      I2 => \i_reg__0\(0),
+      I3 => \i_reg__0\(2),
+      I4 => \i_reg__0\(4),
+      O => p_0_in(4)
+    );
+\i_rep[5]_i_1\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"7FFFFFFF80000000"
+    )
+        port map (
+      I0 => \i_reg__0\(4),
+      I1 => \i_reg__0\(2),
+      I2 => \i_reg__0\(0),
+      I3 => \i_reg__0\(1),
+      I4 => \i_reg__0\(3),
+      I5 => \i_reg__0\(5),
+      O => p_0_in(5)
+    );
+\i_rep[6]_i_1\: unisim.vcomponents.LUT5
+    generic map(
+      INIT => X"10000000"
+    )
+        port map (
+      I0 => audio_data_reg_i_2_n_0,
+      I1 => \freq_counter[3]_i_2_n_0\,
+      I2 => \i_reg__0\(1),
+      I3 => \i_reg__0\(0),
+      I4 => \i_rep[6]_i_3_n_0\,
+      O => \i_rep[6]_i_1_n_0\
+    );
+\i_rep[6]_i_2\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"F7FFFFFF08000000"
+    )
+        port map (
+      I0 => \i_reg__0\(5),
+      I1 => \i_reg__0\(3),
+      I2 => \i_rep[6]_i_4_n_0\,
+      I3 => \i_reg__0\(2),
+      I4 => \i_reg__0\(4),
+      I5 => \i_reg__0\(6),
+      O => p_0_in(6)
+    );
+\i_rep[6]_i_3\: unisim.vcomponents.LUT6
+    generic map(
+      INIT => X"0000000200000000"
+    )
+        port map (
+      I0 => \i_reg__0\(5),
+      I1 => \i_reg__0\(4),
+      I2 => \i_reg__0\(2),
+      I3 => \i_reg__0\(3),
+      I4 => freq_counter(3),
+      I5 => \i_reg__0\(6),
+      O => \i_rep[6]_i_3_n_0\
+    );
+\i_rep[6]_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"7"
+    )
+        port map (
+      I0 => \i_reg__0\(0),
+      I1 => \i_reg__0\(1),
+      O => \i_rep[6]_i_4_n_0\
     );
 end STRUCTURE;
 library IEEE;
@@ -875,7 +799,7 @@ library UNISIM;
 use UNISIM.VCOMPONENTS.ALL;
 entity design_1_sinus_sampler_0_0 is
   port (
-    click : in STD_LOGIC;
+    clock : in STD_LOGIC;
     audio_data : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   attribute NotValidForBitStream : boolean;
@@ -889,10 +813,14 @@ entity design_1_sinus_sampler_0_0 is
 end design_1_sinus_sampler_0_0;
 
 architecture STRUCTURE of design_1_sinus_sampler_0_0 is
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of clock : signal is "xilinx.com:signal:clock:1.0 clock CLK";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of clock : signal is "XIL_INTERFACENAME clock, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1";
 begin
 inst: entity work.design_1_sinus_sampler_0_0_sinus_sampler
      port map (
       audio_data(15 downto 0) => audio_data(15 downto 0),
-      click => click
+      clock => clock
     );
 end STRUCTURE;

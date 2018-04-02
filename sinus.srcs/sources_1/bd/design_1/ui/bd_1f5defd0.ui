@@ -2,31 +2,88 @@
    ExpandedHierarchyInLayout: "",
    guistr: "# # String gsaved with Nlview 6.6.11  2017-06-12 bk=1.3860 VDI=40 GEI=35 GUI=JA:1.6
 #  -string -flagsOSRD
-preplace port bclock -pg 1 -y 80 -defaultsOSRD
-preplace port mclock -pg 1 -y 100 -defaultsOSRD
-preplace port sys_clock -pg 1 -y 480 -defaultsOSRD
-preplace port sdata -pg 1 -y 190 -defaultsOSRD
-preplace port lrclock -pg 1 -y 60 -defaultsOSRD
-preplace port ok -pg 1 -y 500 -defaultsOSRD
-preplace inst driver_output_0 -pg 1 -lvl 3 -y 190 -defaultsOSRD
-preplace inst sinus_sampler_0 -pg 1 -lvl 2 -y 210 -defaultsOSRD
-preplace inst square_sampler_0 -pg 1 -lvl 2 -y 340 -defaultsOSRD
-preplace inst clocker_0 -pg 1 -lvl 2 -y 70 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 2 -y 480 -defaultsOSRD
-preplace inst big_ben_0 -pg 1 -lvl 1 -y 210 -defaultsOSRD
-preplace netloc clk_wiz_0_clk_100 1 0 3 20 340 300 410 580
-preplace netloc clocker_0_out_lrclock 1 2 2 590 60 NJ
-preplace netloc clk_wiz_0_locked 1 2 2 NJ 500 NJ
-preplace netloc clocker_0_out_bclock 1 2 2 580 80 NJ
-preplace netloc driver_output_0_out_sdata 1 3 1 NJ
-preplace netloc square_sampler_0_audio_data 1 2 1 610J
-preplace netloc clk_wiz_0_clk_12288 1 1 3 300 140 600 100 NJ
-preplace netloc sys_clock_1 1 0 2 NJ 480 NJ
-preplace netloc big_ben_0_out_click 1 1 1 NJ
-preplace netloc sinus_sampler_0_audio_data 1 2 1 NJ
-levelinfo -pg 1 0 160 440 760 930 -top 0 -bot 550
+preplace port bclock -pg 1 -y 1000 -defaultsOSRD
+preplace port mclock -pg 1 -y 1180 -defaultsOSRD
+preplace port ddr3_sdram -pg 1 -y 850 -defaultsOSRD
+preplace port eth_mii -pg 1 -y 320 -defaultsOSRD
+preplace port eth_mdio_mdc -pg 1 -y 340 -defaultsOSRD
+preplace port sys_clock -pg 1 -y 1240 -defaultsOSRD
+preplace port usb_uart -pg 1 -y 730 -defaultsOSRD
+preplace port sdata -pg 1 -y 1090 -defaultsOSRD
+preplace port lrclock -pg 1 -y 980 -defaultsOSRD
+preplace port ok -pg 1 -y 1220 -defaultsOSRD
+preplace port eth_ref_clk -pg 1 -y 1280 -defaultsOSRD
+preplace port reset -pg 1 -y 1210 -defaultsOSRD
+preplace inst rst_mig_7series_0_83M -pg 1 -lvl 1 -y 590 -defaultsOSRD
+preplace inst mig_7series_0 -pg 1 -lvl 6 -y 890 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -y 610 -defaultsOSRD
+preplace inst microblaze_0_axi_periph -pg 1 -lvl 2 -y 210 -defaultsOSRD
+preplace inst driver_output_0 -pg 1 -lvl 6 -y 1090 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 790 -defaultsOSRD
+preplace inst axi_timer_0 -pg 1 -lvl 3 -y 220 -defaultsOSRD
+preplace inst microblaze_0_xlconcat -pg 1 -lvl 2 -y 480 -defaultsOSRD
+preplace inst sinus_sampler_0 -pg 1 -lvl 4 -y 870 -defaultsOSRD
+preplace inst axi_ethernetlite_0 -pg 1 -lvl 6 -y 340 -defaultsOSRD
+preplace inst mdm_1 -pg 1 -lvl 3 -y 620 -defaultsOSRD
+preplace inst microblaze_0_axi_intc -pg 1 -lvl 3 -y 420 -defaultsOSRD
+preplace inst square_sampler_0 -pg 1 -lvl 4 -y 1130 -defaultsOSRD
+preplace inst switcher_0 -pg 1 -lvl 5 -y 880 -defaultsOSRD
+preplace inst clocker_0 -pg 1 -lvl 5 -y 1040 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 6 -y 740 -defaultsOSRD
+preplace inst microblaze_0 -pg 1 -lvl 4 -y 460 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 5 -y 1230 -defaultsOSRD
+preplace inst microblaze_0_local_memory -pg 1 -lvl 5 -y 450 -defaultsOSRD
+preplace inst triangle_sampler_0 -pg 1 -lvl 4 -y 1000 -defaultsOSRD
+preplace netloc mig_7series_0_mmcm_locked 1 0 7 30 690 NJ 690 NJ 690 NJ 690 NJ 690 1990J 980 2320
+preplace netloc clk_wiz_0_clk_100 1 3 3 1080 1200 1610J 1130 1930
+preplace netloc clocker_0_out_lrclock 1 5 2 2020 1000 2340J
+preplace netloc microblaze_0_axi_periph_M04_AXI 1 2 1 720
+preplace netloc axi_ethernetlite_0_MDIO 1 6 1 NJ
+preplace netloc triangle_sampler_0_audio_data 1 4 1 1580J
+preplace netloc clk_wiz_0_locked 1 5 2 NJ 1220 NJ
+preplace netloc clocker_0_out_bclock 1 5 2 1970 1180 2350J
+preplace netloc mig_7series_0_DDR3 1 6 1 NJ
+preplace netloc microblaze_0_intr 1 2 1 750
+preplace netloc driver_output_0_out_sdata 1 6 1 NJ
+preplace netloc microblaze_0_Clk 1 0 7 20 480 400 560 760 520 1060 360 1600 360 1980 670 2320
+preplace netloc square_sampler_0_audio_data 1 4 1 1600
+preplace netloc switcher_0_out_R 1 5 1 1950
+preplace netloc microblaze_0_axi_periph_M03_AXI 1 2 1 740
+preplace netloc axi_smc_M00_AXI 1 5 1 2000
+preplace netloc microblaze_0_intc_axi 1 2 1 730
+preplace netloc microblaze_0_interrupt 1 3 1 1070
+preplace netloc rst_mig_7series_0_83M_peripheral_aresetn 1 1 5 410 580 770 550 NJ 550 1610 530 2010
+preplace netloc clk_wiz_0_clk_12288 1 4 3 1610 1110 1940 1190 2360J
+preplace netloc microblaze_0_M_AXI_DC 1 4 1 1590
+preplace netloc microblaze_0_ilmb_1 1 4 1 N
+preplace netloc sys_clock_1 1 0 5 NJ 1240 NJ 1240 NJ 1240 NJ 1240 NJ
+preplace netloc microblaze_0_axi_dp 1 1 4 380 10 NJ 10 NJ 10 1590
+preplace netloc rst_mig_7series_0_83M_mb_reset 1 1 3 NJ 550 730 530 1090J
+preplace netloc axi_gpio_0_gpio_io_o 1 3 2 NJ 800 1580
+preplace netloc microblaze_0_axi_periph_M01_AXI 1 2 4 700 120 NJ 120 NJ 120 2020J
+preplace netloc microblaze_0_M_AXI_IC 1 4 1 1580
+preplace netloc axi_uartlite_0_UART 1 6 1 NJ
+preplace netloc axi_ethernetlite_0_ip2intc_irpt 1 1 6 420 410 690J 90 NJ 90 NJ 90 NJ 90 2320
+preplace netloc mig_7series_0_ui_clk_sync_rst 1 0 7 20 700 NJ 700 NJ 700 NJ 700 NJ 700 1970J 990 2330
+preplace netloc clk_wiz_0_clk_200 1 5 1 1980
+preplace netloc microblaze_0_axi_periph_M02_AXI 1 2 4 750 320 NJ 320 NJ 320 NJ
+preplace netloc microblaze_0_dlmb_1 1 4 1 N
+preplace netloc clk_wiz_0_clk_25 1 5 2 NJ 1280 NJ
+preplace netloc switcher_0_out_L 1 5 1 1960
+preplace netloc sinus_sampler_0_audio_data 1 4 1 NJ
+preplace netloc axi_ethernetlite_0_MII 1 6 1 NJ
+preplace netloc microblaze_0_debug 1 3 1 1100
+preplace netloc mdm_1_debug_sys_rst 1 0 4 30 500 390J 540 NJ 540 1060
+preplace netloc rst_mig_7series_0_83M_interconnect_aresetn 1 1 1 380
+preplace netloc reset_1 1 0 6 NJ 1210 NJ 1210 NJ 1210 NJ 1210 1590 780 1980
+preplace netloc clk_wiz_0_clk_166 1 5 1 2000
+preplace netloc axi_timer_0_interrupt 1 1 3 430 420 710J 110 1060
+preplace netloc rst_mig_7series_0_83M_bus_struct_reset 1 1 4 NJ 570 780J 560 1080J 370 1610
+levelinfo -pg 1 0 210 560 920 1340 1770 2170 2380 -top 0 -bot 1330
 ",
 }
 {
-   da_board_cnt: "1",
+   da_axi4_cnt: "5",
+   da_board_cnt: "3",
+   da_mb_cnt: "1",
 }

@@ -12,16 +12,17 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="13470000000001fs"></ZoomEndTime>
-      <Cursor1Time time="1951195000000fs"></Cursor1Time>
+      <ZoomEndTime time="2001000000000fs"></ZoomEndTime>
+      <Cursor1Time time="761075000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="169"></NameColumnWidth>
-      <ValueColumnWidth column_width="64"></ValueColumnWidth>
+      <NameColumnWidth column_width="163"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
+   <WVObjectSize size="17" />
    <wave_markers>
-      <marker time="1300195000000" label="" />
+      <marker time="3001086034000" label="" />
+      <marker time="1261075000000" label="" />
    </wave_markers>
    <wvobject fp_name="/top/design_1_i/mclock" type="logic">
       <obj_property name="ElementShortName">mclock</obj_property>
@@ -65,24 +66,17 @@
       <obj_property name="ObjectShortName">bclk_divider[2:0]</obj_property>
       <obj_property name="Radix">OCTALRADIX</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/design_1_i/triangle_sampler_0/inst/audio_data" type="array">
-      <obj_property name="ElementShortName">audio_data[15:0]</obj_property>
-      <obj_property name="ObjectShortName">audio_data[15:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
-      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
-      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
-      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
-      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
-      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   <wvobject fp_name="/top/design_1_i/switcher_0/inst/source_switch" type="logic">
+      <obj_property name="ElementShortName">source_switch</obj_property>
+      <obj_property name="ObjectShortName">source_switch</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/design_1_i/square_sampler_0/inst/audio_data" type="array">
-      <obj_property name="ElementShortName">audio_data[15:0]</obj_property>
-      <obj_property name="ObjectShortName">audio_data[15:0]</obj_property>
+   <wvobject fp_name="/top/design_1_i/switcher_0/inst/out_L" type="array">
+      <obj_property name="ElementShortName">out_L[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_L[15:0]</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="CellHeight">50</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
       <obj_property name="AnalogYRangeMin">0.000000</obj_property>
@@ -91,9 +85,79 @@
       <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
       <obj_property name="AnalogHorizLine">0.000000</obj_property>
    </wvobject>
-   <wvobject fp_name="/top/design_1_i/square_sampler_0/inst/i" type="array">
-      <obj_property name="ElementShortName">i[17:0]</obj_property>
-      <obj_property name="ObjectShortName">i[17:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+   <wvobject fp_name="/top/design_1_i/switcher_0/inst/out_R" type="array">
+      <obj_property name="ElementShortName">out_R[15:0]</obj_property>
+      <obj_property name="ObjectShortName">out_R[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">50</obj_property>
+      <obj_property name="CustomSignalColor">#FFA500</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/switcher_0/inst/in_A_L" type="array">
+      <obj_property name="ElementShortName">in_A_L[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in_A_L[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">300</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/switcher_0/inst/in_A_R" type="array">
+      <obj_property name="ElementShortName">in_A_R[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in_A_R[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">50</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/switcher_0/inst/in_B_L" type="array">
+      <obj_property name="ElementShortName">in_B_L[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in_B_L[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">50</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/switcher_0/inst/in_B_R" type="array">
+      <obj_property name="ElementShortName">in_B_R[15:0]</obj_property>
+      <obj_property name="ObjectShortName">in_B_R[15:0]</obj_property>
+      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+      <obj_property name="CellHeight">50</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+      <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+      <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+      <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+      <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+      <obj_property name="AnalogHorizLine">0.000000</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/sinus_sampler_0/inst/i" type="array">
+      <obj_property name="ElementShortName">i[6:0]</obj_property>
+      <obj_property name="ObjectShortName">i[6:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/top/design_1_i/sinus_sampler_0/inst/freq_counter" type="array">
+      <obj_property name="ElementShortName">freq_counter[9:0]</obj_property>
+      <obj_property name="ObjectShortName">freq_counter[9:0]</obj_property>
    </wvobject>
 </wave_config>

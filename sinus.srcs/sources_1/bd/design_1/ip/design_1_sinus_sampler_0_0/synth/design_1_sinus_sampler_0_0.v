@@ -55,15 +55,17 @@
 (* CORE_GENERATION_INFO = "design_1_sinus_sampler_0_0,sinus_sampler,{x_ipProduct=Vivado 2017.4,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=sinus_sampler,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module design_1_sinus_sampler_0_0 (
-  click,
+  clock,
   audio_data
 );
 
-input wire click;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME clock, FREQ_HZ 100000000, PHASE 0.0, CLK_DOMAIN /clk_wiz_0_clk_out1" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 clock CLK" *)
+input wire clock;
 output wire [15 : 0] audio_data;
 
   sinus_sampler inst (
-    .click(click),
+    .clock(clock),
     .audio_data(audio_data)
   );
 endmodule

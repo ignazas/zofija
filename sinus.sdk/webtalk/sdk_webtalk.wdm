@@ -1,0 +1,42 @@
+version = "1.0";
+clients =
+(
+	{ client_name = "project"; 
+		rules = (
+			{
+				context="software_version_and_target_device";
+				xml_map="software_version_and_target_device";
+				html_map="software_version_and_target_device";
+				html_format="UserEnvStyle";
+			},
+			{
+				context="user_environment";
+				xml_map="user_environment";
+				html_map="user_environment";
+				html_format="UserEnvStyle";
+			}
+		);
+     },
+	{ client_name = "sdk"; 
+		rules = (
+			{
+				context="sdk\\\\bsp/1522663078217";
+				xml_map="sdk\\\\bsp/1522663078217";
+				html_map="sdk\\\\bsp/1522663078217";
+				html_format="UnisimStatsStyle";
+			},
+			{
+				context="sdk\\\\application/1522663081308";
+				xml_map="sdk\\\\application/1522663081308";
+				html_map="sdk\\\\application/1522663081308";
+				html_format="UnisimStatsStyle";
+			},
+			{
+				context="sdk\\\\bsp/1522672091820";
+				xml_map="sdk\\\\bsp/1522672091820";
+				html_map="sdk\\\\bsp/1522672091820";
+				html_format="UnisimStatsStyle";
+			}
+		);
+     }
+);
